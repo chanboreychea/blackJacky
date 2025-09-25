@@ -3,11 +3,13 @@ const data = {
     lastname: "CHEA",
     firstname: "CHANBOREY",
     quotes: "Nothing lasts forever,</br> But we can change the future.",
+    logo: "assets/img/cheachanborey_purple.png",
   },
   kh: {
     lastname: "ជា",
     firstname: "ច័ន្ទបូរី",
     quotes: "គ្មានអ្វីដែលនៅឋិតថេរទេ,</br> ប៉ុន្តែយើងអាចផ្លាស់ប្តូរអនាគតកាល។",
+    logo: "assets/img/cheachanborey_red.png",
   },
 };
 
@@ -18,6 +20,8 @@ const gear = `<i class="fa fa-gear fa-spin" style="font-size: 16px"></i>`;
 
 function setLang(lang) {
   if (!data[lang]) return console.warn(`Language "${lang}" not found`);
+
+  document.getElementById("logo-img").src = data[lang].logo || "";
 
   lastname.textContent = data[lang].lastname || "";
 

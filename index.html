@@ -13,7 +13,6 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/firework.css" />
-
   </head>
   <body>
     <!-- WRAPPER FOR BLUR BACKGROUND -->
@@ -36,7 +35,8 @@
       <div class="logo">
         <!-- <span>Pinocchio</span> -->
         <img
-          src="assets/img/cheachanborey.png"
+          src="assets/img/cheachanborey_purple.png"
+          id="logo-img"
           class="hero-img"
           alt="profile" />
       </div>
@@ -66,12 +66,11 @@
         <span class="dark-mode-toggle"><i class="bx bx-moon"></i></span>
         <!-- <span class="menu-toggle"><i class="bx bx-menu"></i></span> -->
         <span class="lang-switch" data-lang="en">
-          <img src="assets/img/gb.png" width="20" alt="English">
+          <img src="assets/img/gb.png" width="20" alt="English" />
         </span>
         <span class="lang-switch" data-lang="kh">
-          <img src="assets/img/kh.png" width="20" alt="Khmer">
+          <img src="assets/img/kh.png" width="20" alt="Khmer" />
         </span>
-        
       </div>
     </header>
 
@@ -79,12 +78,8 @@
     <div class="hero">
       <div class="col col-1">
         <div class="hero-work">
-          <p>
-            <div id="lastname"></div>
-            <span style="color: var(--dark-blue)"> 
-              <div id="firstname"></div>
-            </span>
-          </p>
+          <span id="lastname"></span>
+          <span id="firstname" style="color: var(--dark-blue)"> </span>
         </div>
 
         <div class="hero-description">
@@ -119,6 +114,5 @@
 
     <script src="assets/js/main.js"></script>
     <script src="assets/js/lang.js"></script>
-    <!-- <script src="assets/js/typewriter.js"></script> -->
   </body>
 </html>
