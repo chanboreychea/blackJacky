@@ -1,0 +1,435 @@
+/* ABRI FATFACE FONT */
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
+/* POPPINS FONT */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "logoFont"; /* Choose a name for your font */
+  src: url("/assets/font/northwood.ttf") format("truetype"); /* Path to the font */
+  font-weight: normal; /* Optional: specify font weight */
+  font-style: normal; /* Optional: specify font style */
+}
+
+/* ===== COLOR VARIABLES ===== */
+:root {
+  --first-color: #2f55a4;
+  --second-color: #e7dbdb;
+  --third-color: #ffffff;
+  --black-color: #000000;
+  --dark-blue: #372461;
+  --bg-color: #ffffff;
+  --blur-element-color: #e7dbdb;
+  --shadow-1: 0 0 20px 5px rgb(101, 41, 240, 0.5);
+  --shadow-2: 0 0 20px 5px rgb(232, 219, 219);
+}
+
+/* ===== DARK MODE COLOR VARIABLES ===== */
+body.dark-mode {
+  --black-color: #ffffff;
+  --dark-blue: #6429ef;
+  --bg-color: #696969;
+  --blur-element-color: #555;
+  --shadow-2: 0 0 20px 5px rgb(232, 219, 219, 0.3);
+}
+body {
+  background-color: var(--bg-color);
+}
+
+/* ===== Blur Background ===== */
+
+.wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  filter: blur(50px);
+  z-index: 1;
+}
+
+.wrapper::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: var(--blur-element-color);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.wrapper::after {
+  content: "";
+  position: absolute;
+  top: 160px;
+  right: 10vw;
+  width: 100px;
+  height: 100px;
+  background-color: var(--blur-element-color);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.wrapper .circle {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  /* right: 10vw; */
+  width: 100px;
+  height: 100px;
+  background-color: #607dba;
+  border-radius: 50%;
+  z-index: 0;
+}
+
+/* ===== Header - Navigation Bar ===== */
+
+header {
+  position: fixed;
+  font-family: "Abril Fatface", sans-serif;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8vw;
+  z-index: 50;
+}
+
+/* .logo span {
+  font-size: 50px;
+  font-family: "logoFont", sans-serif;
+  color: var(--black-color);
+} */
+
+.logo {
+  width: 55px;
+  height: auto;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.nav_menu {
+  display: none;
+  list-style-type: none;
+}
+.nav-list {
+  padding: 0 30px;
+}
+.nav-link {
+  position: relative;
+  text-decoration: none;
+  color: var(--black-color);
+  font-size: 18px;
+  transition: 0.3s;
+  font-family: Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+.nav-link:hover {
+  color: var(--first-color);
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 2px;
+  background-color: var(--first-color);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+.nav-link:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav_button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.play-mode-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-mode-toggle i {
+  font-size: 24px;
+}
+
+.btn {
+  padding: 0 24px;
+  height: 45px;
+  border: none;
+  border-radius: 50px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.nav_button span {
+  color: var(--black-color);
+  cursor: pointer;
+}
+.nav_button .menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+/* ===== Hero section ===== */
+
+.hero {
+  position: relative;
+  display: flex;
+  padding: 0 8vw;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+.hero-work {
+  font-family: "Abrill Fatface", sans-serif;
+  font-size: 50px;
+  color: var(--black-color);
+  animation: fade-right 2s var(--animation-delay) forwards;
+  --animation-delay: 200ms;
+  opacity: 0;
+}
+
+.hero-description {
+  font-family: "Poppins", sans-serif;
+  padding-block: 20px 30px;
+  width: 500px;
+  color: var(--black-color);
+  animation: fade-right 2s var(--animation-delay) forwards;
+  --animation-delay: 400ms;
+  opacity: 0;
+}
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  animation: fade-right 2s var(--animation-delay) forwards;
+  --animation-delay: 600ms;
+  opacity: 0;
+}
+.download-btn {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--first-color);
+  color: var(--third-color);
+  box-shadow: var(--shadow-1);
+}
+
+.hero-social-icons {
+  position: absolute;
+  bottom: 80px;
+  display: flex;
+  gap: 20px;
+}
+.hero-social-icons i {
+  opacity: 0;
+  font-size: 24px;
+  color: var(--black-color);
+  cursor: pointer;
+  transition: color 0.3s;
+  animation: fade-down 1s ease-out var(--icon-animation-delay) forwards;
+}
+.bxl-github {
+  --icon-animation-delay: 0ms;
+  --icon-count: -20px;
+}
+.bxl-telegram {
+  --icon-animation-delay: 200ms;
+  --icon-count: -50px;
+}
+.bxl-facebook-circle {
+  --icon-animation-delay: 400ms;
+  --icon-count: -80px;
+}
+
+.hero-social-icons i:hover {
+  color: var(--first-color);
+}
+
+/* ====== Hero Image section ===== */
+
+.col-2 {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-img-container {
+  width: 400px;
+  height: 405px;
+  background: var(--first-color);
+  border-radius: 46% 54% 34% 66% / 54% 61% 39% 46%;
+  overflow: hidden;
+  animation: fade-left 1.4s ease-out;
+}
+.hero-img-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -7px;
+  transform: translateY(-50%);
+  width: 410px;
+  height: 415px;
+  border: 2px solid var(--first-color);
+  border-radius: 46% 54% 34% 66% / 54% 61% 39% 46%;
+}
+.hero-img {
+  height: 405px;
+}
+
+/* ===== Animations ==== */
+
+@keyframes fade-right {
+  from {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-down {
+  from {
+    transform: translateY(var(--icon-count));
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-left {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ===== Responsive Design ===== */
+
+@media (max-width: 1052px) {
+  header,
+  .hero {
+    padding: 0 4vw;
+  }
+}
+
+@media (max-width: 962px) {
+  header {
+    position: relative;
+  }
+
+  .nav_button .menu-toggle {
+    display: block;
+  }
+
+  .nav_menu {
+    display: none;
+  }
+  .nav_menu.active {
+    display: block;
+    position: absolute;
+    top: 100px;
+    right: 0px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    width: 300px;
+    padding: 40px 0;
+    border-radius: 20px 0 20px 20px;
+    box-shadow: -8px 8px 20px rgba(0, 0, 0, 0.2);
+  }
+  .nav-list {
+    margin: 20px 0;
+  }
+  .nav-link {
+    color: #000000;
+  }
+
+  .hero {
+    flex-direction: column;
+  }
+  .col {
+    width: 100%;
+  }
+  .col-1 {
+    order: 2;
+    margin-top: 19px;
+  }
+  .col-2 {
+    order: 1;
+    align-items: center;
+  }
+  .hero-img-container::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .hero-social-icons {
+    position: static;
+    margin: 60px 0;
+  }
+}
+
+@media (max-width: 514px) {
+  header,
+  .hero {
+    padding: 6vw;
+  }
+  .hire-me-btn {
+    display: none;
+  }
+  .hero-work {
+    font-size: 40px;
+  }
+  .hero-img-container {
+    width: 270px;
+    height: 275px;
+  }
+  .hero-img-container::before {
+    width: 280px;
+    height: 285px;
+  }
+  .hero-img {
+    height: 275px;
+  }
+  .hero-description {
+    width: inherit;
+  }
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>blackJack.</title>
+    <!-- IMPORT BOXICONS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/firework.css" />
+
+  </head>
+  <body>
+    <!-- WRAPPER FOR BLUR BACKGROUND -->
+    <div class="wrapper">
+      <div class="circle"></div>
+      <div class="container-firework">
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+        <div class="firework"></div>
+      </div>
+    </div>
+
+    <!-- HEADER SECTION -->
+    <header>
+      <div class="logo">
+        <!-- <span>Pinocchio</span> -->
+        <img
+          src="assets/img/cheachanborey.png"
+          class="hero-img"
+          alt="profile" />
+      </div>
+
+      <u class="nav_menu">
+        <li class="nav-list">
+          <a href="/" class="nav-link">Home</a>
+        </li>
+        <li class="nav-list">
+          <a href="#" class="nav-link">Services</a>
+        </li>
+        <li class="nav-list">
+          <a href="#" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-list">
+          <a href="#" class="nav-link">Contact</a>
+        </li>
+      </u>
+
+      <audio
+        id="sound-player"
+        src="assets/sounds/vg.mp3"
+        preload="auto"></audio>
+
+      <div class="nav_button">
+        <span class="play-mode-toggle"><i class="bx bx-play"></i></span>
+        <span class="dark-mode-toggle"><i class="bx bx-moon"></i></span>
+        <!-- <span class="menu-toggle"><i class="bx bx-menu"></i></span> -->
+        <span class="lang-switch" data-lang="en">
+          <img src="assets/img/gb.png" width="20" alt="English">
+        </span>
+        <span class="lang-switch" data-lang="kh">
+          <img src="assets/img/kh.png" width="20" alt="Khmer">
+        </span>
+        
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <div class="hero">
+      <div class="col col-1">
+        <div class="hero-work">
+          <p>
+            <div id="lastname"></div>
+            <span style="color: var(--dark-blue)"> 
+              <div id="firstname"></div>
+            </span>
+          </p>
+        </div>
+
+        <div class="hero-description">
+          <!-- <div id="typedtext"></div> -->
+          <div id="quotes"></div>
+        </div>
+
+        <!-- <div class="hero-buttons">
+          <button class="btn download-btn">
+            <i class="bx bx-file"></i>
+            <span>CV</span>
+          </button>
+        </div> -->
+
+        <div class="hero-social-icons">
+          <i class="bx bxl-github"></i>
+
+          <i class="bx bxl-telegram"></i>
+
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="bx bxl-facebook-circle"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="col col-2">
+        <div class="hero-img-container">
+          <img src="assets/img/profile.jpeg" class="hero-img" alt="profile" />
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/lang.js"></script>
+    <!-- <script src="assets/js/typewriter.js"></script> -->
+  </body>
+</html>
